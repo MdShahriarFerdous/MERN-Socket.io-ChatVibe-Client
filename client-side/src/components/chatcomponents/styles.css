@@ -1,0 +1,21 @@
+.chat-icon-navbar {
+	margin-right: 5px;
+	margin-top: 8px;
+}
+.messages {
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+	scrollbar-width: none;
+}
+div.indicator {
+	height: 11px;
+	width: 11px;
+	border-radius: 5.5px;
+	position: relative;
+	left: -4px;
+	top: 2px;
+}
+/* p.indicator-para {
+	font-size: 1px;
+} */

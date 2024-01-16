@@ -1,0 +1,46 @@
+h1.logo-name {
+	color: #5650e8;
+	font-weight: 700;
+	margin-left: 4px;
+}
+h2.card-title,
+p {
+	color: #30343f;
+}
+h2.card-title {
+	font-size: 2.625rem;
+}
+.chat-icon {
+	color: #5650e8;
+	font-weight: 700;
+	font-size: 3rem;
+	margin-bottom: 4px;
+}
+form div.card {
+	box-shadow: 0 20px 40px 0 rgba(86, 80, 232, 0.15);
+}
+button.submit-btn {
+	padding-top: 1.2rem;
+	padding-bottom: 1.2rem;
+	background: rgb(86, 80, 232);
+	transition: background 0.15s;
+	font-size: 0.875rem;
+}
+button.bg-gradient-primary.submit-btn:hover {
+	background: #4844ca;
+}
+button.bg-gradient-primary.submit-btn:active {
+	background: #4844ca;
+}
+.btn.bg-gradient-primary:hover {
+	background-color: #4844ca;
+	border-color: #4844ca;
+}
+.form-control:focus {
+	border: 1px solid #5650e8;
+	outline: 0;
+	box-shadow: 0 0 0 0.15px #5650e8;
+}
+p .text-info {
+	color: #5650e8 !important;
+}
