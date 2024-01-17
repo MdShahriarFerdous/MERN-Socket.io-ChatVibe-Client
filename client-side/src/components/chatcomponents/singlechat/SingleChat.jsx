@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { useChat } from "../../../context/chatContext";
 import { useAuth } from "../../../context/authContext";
 import { IoSend } from "react-icons/io5";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import animationData from "../../../assets/animation/typing.json";
 import {
 	Avatar,
@@ -78,12 +78,6 @@ const SingleChat = () => {
 	useEffect(() => {
 		scrollRef.current?.scrollIntoView({ behavior: "smooth" });
 	}, [isTyping]);
-
-	const defaultOptions = {
-		loop: true,
-		autoplay: true,
-		animationData: animationData,
-	};
 
 	const fetchAllMessages = async () => {
 		if (!selectedChat) return;
@@ -326,11 +320,14 @@ const SingleChat = () => {
 							</div>
 						)}
 						{isTyping ? (
-							<div className="mb-4" ref={scrollRef}>
+							<div
+								className="mb-4"
+								ref={scrollRef}
+								style={{ width: "70px", marginLeft: "24px" }}>
 								<Lottie
-									options={defaultOptions}
-									width={70}
-									style={{ marginBottom: 15, marginLeft: 0 }}
+									loop={true}
+									animationData={animationData}
+									autoPlay={true}
 								/>
 							</div>
 						) : (

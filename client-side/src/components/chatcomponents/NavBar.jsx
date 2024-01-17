@@ -15,14 +15,13 @@ import { IoSearch } from "react-icons/io5";
 import { IoChatbubbles } from "react-icons/io5";
 import { BellIcon } from "@chakra-ui/icons";
 import { useAuth } from "../../context/authContext";
+import "./animate.min.css";
 import "./styles.css";
 import ProfileModal from "./profilemodal/ProfileModal";
 import { useNavigate } from "react-router-dom";
 import SideDrawer from "./sidedrawer/SideDrawer";
 import { useChat } from "../../context/chatContext";
 import { getSender, truncateString } from "../../config/chatLogics";
-import NotificationBadge from "react-notification-badge";
-import { Effect } from "react-notification-badge";
 
 const NavBar = () => {
 	const [auth, setAuth] = useAuth();
@@ -98,10 +97,17 @@ const NavBar = () => {
 							mr={{ base: "1.5rem", md: "3rem" }}
 							mt="3px">
 							{notification.length > 0 && (
-								<NotificationBadge
-									count={notification.length}
-									effect={Effect.SCALE}
-								/>
+								<div className="notify-div animated bounceInDown">
+									<p
+										style={{
+											fontSize: "0.8rem",
+											fontWeight: "bold",
+											color: "white",
+											marginBottom: "3px",
+										}}>
+										{notification.length}
+									</p>
+								</div>
 							)}
 
 							<BellIcon boxSize={7} color="#AFAFD5" />
